@@ -1,0 +1,16 @@
+# Build stage
+FROM eclipse-temurin:21.0.2_13-jdk-jammy as builder
+WORKDIR /app
+# Copy project into container /app folder
+COPY .. .
+# Enter in module folder
+WORKDIR /app/statistics-app
+# package JAR (will be in /app/target/)
+RUN ./mvnw package -DskipTests
+
+# Run stage
+FROM eclipse-temurin:21.0.2_13-jdk-jammy
+WORKDIR /app
+# Copy JAR from folder target/ that exists in builder container
+COPY --from=builder /app/statistics-app/target/statistics-app-*.jar statistics-application.jar
+ENTRYPOINT ["java", "-jar", "statistics-application.jar"]
