@@ -1,8 +1,5 @@
 package com.khorunzhyn.statistics.model.sensor;
 
-import jakarta.persistence.*;
-
-
 public class SensorUnit {
     private Long id;
 

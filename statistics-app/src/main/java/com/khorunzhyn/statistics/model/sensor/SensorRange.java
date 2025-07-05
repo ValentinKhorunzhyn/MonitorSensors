@@ -1,10 +1,5 @@
 package com.khorunzhyn.statistics.model.sensor;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.Min;
-
-
 public class SensorRange {
     private Integer valueFrom;
 

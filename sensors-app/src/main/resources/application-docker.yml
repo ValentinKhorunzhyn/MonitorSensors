@@ -16,7 +16,7 @@ spring:
       baseline-on-migrate: true
       schemas: catalogue
 server:
-    port: 8080
+  port: 8080
 logging:
-    level:
-      org.springframework.core.env: DEBUG
+  level:
+    org.springframework.core.env: DEBUG

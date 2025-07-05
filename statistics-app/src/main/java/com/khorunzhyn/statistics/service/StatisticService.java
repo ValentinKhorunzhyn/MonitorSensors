@@ -1,7 +1,6 @@
 package com.khorunzhyn.statistics.service;
 
 import com.khorunzhyn.statistics.client.SensorsRestClient;
-import com.khorunzhyn.statistics.dto.SensorDto;
 import com.khorunzhyn.statistics.mapper.StatisticMapper;
 import com.khorunzhyn.statistics.model.Statistic;
 import com.khorunzhyn.statistics.model.sensor.Sensor;
@@ -10,12 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @Service
 public class StatisticService {

@@ -1,7 +1,7 @@
 package com.khorunzhyn.sensors.security;
 
-import com.khorunzhyn.sensors.repository.UserRepository;
 import com.khorunzhyn.sensors.model.Authority;
+import com.khorunzhyn.sensors.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

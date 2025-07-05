@@ -1,7 +1,7 @@
 package com.khorunzhyn.sensors.controller;
 
-import com.khorunzhyn.sensors.service.SensorUnitService;
 import com.khorunzhyn.sensors.model.SensorUnit;
+import com.khorunzhyn.sensors.service.SensorUnitService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
@@ -23,6 +23,7 @@ public class SensorUnitRestController {
     public SensorUnitRestController(SensorUnitService sensorUnitService) {
         this.sensorUnitService = sensorUnitService;
     }
+
     @Operation(summary = "Get all sensors types")
     @GetMapping
     public List<SensorUnit> findSensorUnits() {

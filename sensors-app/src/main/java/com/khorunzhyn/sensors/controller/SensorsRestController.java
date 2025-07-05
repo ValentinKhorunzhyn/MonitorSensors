@@ -33,6 +33,7 @@ public class SensorsRestController {
     public SensorsRestController(SensorService sensorService) {
         this.sensorService = sensorService;
     }
+
     @Operation(summary = "Get sensor by name and model or get all")
     @GetMapping
     public List<Sensor> findSensors(@RequestParam(required = false) String name,
@@ -40,6 +41,7 @@ public class SensorsRestController {
         log.info("Get all sensors with included parameters name = {} and model = {}", name, model);
         return sensorService.findAllSensors(name, model);
     }
+
     @Operation(summary = "Create sensor with request body")
     @PostMapping
     public ResponseEntity<?> createSensor(@Valid @RequestBody SensorDto dto,

@@ -2,8 +2,8 @@ package com.khorunzhyn.sensors.controller;
 
 import com.khorunzhyn.sensors.dto.SensorDto;
 import com.khorunzhyn.sensors.model.Sensor;
-import com.khorunzhyn.sensors.util.StringUtil;
 import com.khorunzhyn.sensors.service.SensorService;
+import com.khorunzhyn.sensors.util.StringUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -36,11 +36,13 @@ public class SensorRestController {
         log.info("Get sensor with id = {}", id);
         return sensorService.findSensor(id).orElseThrow(() -> new NoSuchElementException(StringUtil.MSG_SENSOR_NOT_FOUND));
     }
+
     @Operation(summary = "Get sensor by ID")
     @GetMapping("/{id}")
     public Sensor findSensor(@ModelAttribute("sensor") Sensor sensor) {
         return sensor;
     }
+
     @Operation(summary = "Update sensor with body and ID")
     @PutMapping("/{id}")
     public ResponseEntity<?> updateSensor(@PathVariable Long id,
@@ -60,6 +62,7 @@ public class SensorRestController {
                     .build();
         }
     }
+
     @Operation(summary = "Delete sensor by ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSensor(@PathVariable Long id) {

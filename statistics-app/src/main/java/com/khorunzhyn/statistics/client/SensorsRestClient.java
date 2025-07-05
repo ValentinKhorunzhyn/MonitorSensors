@@ -1,9 +1,7 @@
 package com.khorunzhyn.statistics.client;
 
-import com.khorunzhyn.statistics.dto.SensorDto;
 import com.khorunzhyn.statistics.model.sensor.Sensor;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;

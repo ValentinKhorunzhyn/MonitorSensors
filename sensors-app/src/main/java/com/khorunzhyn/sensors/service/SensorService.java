@@ -1,14 +1,14 @@
 package com.khorunzhyn.sensors.service;
 
 import com.khorunzhyn.sensors.dto.SensorDto;
-import com.khorunzhyn.sensors.model.Sensor;
-import com.khorunzhyn.sensors.repository.SensorRepository;
-import com.khorunzhyn.sensors.repository.SensorTypeRepository;
 import com.khorunzhyn.sensors.enums.SensorTypes;
 import com.khorunzhyn.sensors.enums.SensorUnits;
 import com.khorunzhyn.sensors.mapper.SensorObjectMapper;
+import com.khorunzhyn.sensors.model.Sensor;
 import com.khorunzhyn.sensors.model.SensorType;
 import com.khorunzhyn.sensors.model.SensorUnit;
+import com.khorunzhyn.sensors.repository.SensorRepository;
+import com.khorunzhyn.sensors.repository.SensorTypeRepository;
 import com.khorunzhyn.sensors.repository.SensorUnitRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
