@@ -5,6 +5,8 @@ WORKDIR /app
 COPY .. .
 # Enter in module folder
 WORKDIR /app/sensors-app
+# Fix line endings and set execute permissions.
+RUN sed -i 's/\r$//' mvnw && chmod +x mvnw
 # package JAR (will be in /app/target/)
 RUN ./mvnw package -DskipTests
 
